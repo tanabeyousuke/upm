@@ -176,7 +176,7 @@ sub build{
 }
 
 if ($ARGV[0] ne "setup"){
-    open(FILE, ".build_data") or die "please execute `ppm setup`\n";
+    open(FILE, ".build_data") or die "please execute `upm setup`\n";
 }
 
 if ($ARGV[0] eq "setup"){
