@@ -173,6 +173,8 @@ sub build{
     $linkcommand =~ s/<name>/$name/;
     $linkcommand =~ s/<obj>/$objlist/;
     system($linkcommand);
+
+    return $name;
 }
 
 if ($ARGV[0] ne "setup"){
@@ -191,5 +193,8 @@ if ($ARGV[0] eq "setup"){
     }
 } elsif ($ARGV[0] eq "build"){
     build();
-
+} elsif ($ARGV[0] eq "run"){
+    $softname = build();
+    system("./".$softname);
+    system("rm ".$softname);
 }
