@@ -194,7 +194,7 @@ if ($ARGV[0] eq "setup"){
 } elsif ($ARGV[0] eq "build"){
     build();
 } elsif ($ARGV[0] eq "run"){
-    $softname = build();
+    my $softname = build();
     system("./".$softname);
     system("rm ".$softname);
 }
